@@ -5,7 +5,7 @@
  * Instructor: Jean-francois Nepton<br>
  * Created: Jan 14, 2017
  */
-
+package com.sqa.ks.helpers;
 
 import java.util.*;
 
@@ -23,5 +23,19 @@ public class AppBasics {
 		System.out.println("Hello, Welcome to the " + appName + " App.");
 		System.out.print("Could I please get your name?");
 		return scanner.nextLine();
+	}
+
+	public static String requestInfo(String question1) {
+		String response;
+		System.out.print(question1 + "");
+		response = scanner.nextLine();
+		return response;
+	}
+
+	public static String requestInfoFromUser(String question) {
+		String response;
+		System.out.print(question + " ");
+		response = scanner.nextLine();
+		return response;
 	}
 }
