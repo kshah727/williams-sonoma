@@ -4,7 +4,7 @@ import org.apache.log4j.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 
-public class BasicPage {
+public class BasicPage extends Core {
 
 	private WebDriver driver;
 
