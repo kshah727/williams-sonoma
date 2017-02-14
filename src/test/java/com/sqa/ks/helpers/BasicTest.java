@@ -36,7 +36,7 @@ public class BasicTest extends Core {
 		return this.log;
 	}
 
-	@BeforeMethod
+	@BeforeMethod(groups = "chrome")
 	public void setupChrome() {
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 		this.driver = new ChromeDriver();
@@ -44,14 +44,14 @@ public class BasicTest extends Core {
 		this.driver.get(this.baseUrl);
 	}
 
-	@BeforeMethod(enabled = false)
+	@BeforeMethod(groups = "firefox")
 	public void setupFirefox() {
 		this.driver = new FirefoxDriver();
 		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		this.driver.get(this.baseUrl);
 	}
 
-	@BeforeMethod(enabled = false)
+	@BeforeMethod(groups = "safari")
 	public void setupSafari() {
 		this.driver = new SafariDriver();
 		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
